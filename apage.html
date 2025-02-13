@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessssss</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(to bottom, #0d0d0d, #1a1a1a); /* Dark military-style gradient */
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            animation: fadeText 2s infinite alternate;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 20px;
+            max-width: 600px;
+            animation: fadeText 2s infinite alternate;
+        }
+        img {
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+        button {
+            width: 120px;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 15px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        .yes {
+            background-color: red;
+            color: black;
+        }
+        .no {
+            background-color: gray;
+            color: white;
+        }
+        .yes:hover {
+            background-color: darkred;
+            color: white;
+            transform: scale(1.1);
+        }
+        .no:hover {
+            background-color: darkgray;
+            transform: scale(1.1);
+        }
+
+        /* Fading Text Effect */
+        @keyframes fadeText {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine???🥹</h1>
+    <img src="shy.jpg" alt="" width="300" height="300">
+    
+    <p> As usual, tap 'no' first heheee🤭</p>
+    
+    <div class="buttons">
+        <button class="yes" onclick="goToPage('flowers.html')">Yes</button>
+        <button class="no" onclick="goToPage('no.html')">No</button>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
